@@ -17,6 +17,9 @@ using std::string;
 using std::toupper;
 using std::getline;
 
+//This is a class definition for a node object. The node object is used to store information about a character in Morse code. It has two public functions, setChar and
+// getChar, which set and get the character stored in the node, respectively. It also has two public functions, setLeftN and setRightN, which set the left and right
+// nodes of the node, respectively. Finally, it has a private member variable, morseTable, which stores the Morse code for each character.
 class node
 {
 public:
@@ -103,6 +106,10 @@ private:
 
 };
 
+//This is a class definition for a binary search tree (BST). The class contains a constructor, a destructor, and several member functions. The constructor initializes
+// the root node of the BST to null. The isEmpty() function checks if the BST is empty. The insertNode() function inserts a new node into the BST. The search() function
+// searches for a target character in the BST. The setConvert() function sets the string of Morse code to be converted. The getText() function returns the converted
+// text. The print2D() function prints the BST in a 2D format. Finally, the getRoot() function returns the root node of the BST.
 class bst
 {
 public:

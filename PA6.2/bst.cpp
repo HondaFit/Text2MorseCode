@@ -3,6 +3,12 @@
 
 //////////////////////////////////////////////////////////////////////////
 
+//This is a constructor and set of methods for a node class. The constructor takes an integer index as an argument and sets the morseChar and morseCode variables to
+// the corresponding values in the charTable and morseTable arrays. The setChar() method takes an integer index as an argument and sets the morseChar and morseCode
+// variables to the corresponding values in the charTable and morseTable arrays. The getChar() and getMorse() methods return the values of the morseChar and morseCode
+// variables respectively. The setLeftN() and setRightN() methods set the leftN and rightN variables to the given node pointer. The getLeftN() and getRightN() methods
+// return the values of the leftN and rightN variables respectively.
+
 node::node()
 {
 	//value = 0;
@@ -64,6 +70,17 @@ node* node::getRightN()
 
 
 //////////////////////////////////////////////////////////////////////////
+
+
+//This code is for a binary search tree (BST) class. The bst::bst() function is a constructor for the BST class. It sets the root node of the BST to NULL. The isEmpty
+//() function checks if the root node is NULL, and returns true if it is, and false if it is not. The insertNode() function takes a node pointer as an argument and
+// inserts it into the BST. It checks if the root node is NULL, and if it is, sets the root node to the new node. If the root node is not NULL, it traverses the tree
+// to find the correct position for the new node. It checks for duplicate values and inserts the new node to the left or right of the current node depending on the
+// value of the new node. The search() function takes a character as an argument and searches the BST for the corresponding Morse code. It traverses the tree until
+// it finds the correct node and returns the Morse code. The getText() function returns the converted text. The setConvert() function takes a string as an argument
+// and adds it to the converted text. Finally, the print2D() function prints the BST in a 2D format. It takes a node pointer and an integer as arguments and recursively traverses the tree, 
+//printing the nodes in the correct order.
+
 bst::bst()
 {
 	root = NULL;
@@ -187,4 +204,5 @@ void bst::print2D(node* r, int space) //credit to a youtuber simple snippets
 	cout << r->getChar() << "\n"; // 6
 	print2D(r->getLeftN(), space); // Process left child  7
 }
+
 
