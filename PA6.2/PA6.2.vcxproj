@@ -134,6 +134,7 @@
     <ClInclude Include="bst.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="charTable.txt" />
     <Text Include="convert.txt" />
     <Text Include="morseTable.txt" />
   </ItemGroup>

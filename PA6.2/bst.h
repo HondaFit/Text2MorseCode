@@ -37,7 +37,8 @@ public:
 	node* getLeftN();
 	node* getRightN();
 
-
+	string getCodeFromFile(int index);
+	char getCharFromFile(int index);
 
 
 private:
@@ -47,6 +48,8 @@ private:
 
 	string morseCode;
 	char morseChar;
+
+	std::fstream opFile;
 
 	char charTable[38] = {
 		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',

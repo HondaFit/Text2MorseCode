@@ -31,13 +31,43 @@ node::node(int index)
 	leftN = NULL;
 }
 
+
+char node::getCharFromFile(int index)
+{
+	char character;
+	opFile.open("charTable.txt", std::ios::in);
+	for (int i = 0; i <= index; i++)
+	{
+		opFile >> character;
+	}
+	opFile.close();
+	return character;
+}
+
+string node::getCodeFromFile(int index)
+{
+	string code;
+	opFile.open("morseTable.txt", std::ios::in);
+	for (int i = 0; i <= index; i++)
+	{
+		opFile >> code;
+	}
+	opFile.close();
+	return code;
+}
+
 void node::setChar(int index)
 {
 	//pData->setAge(uAge);
 	//pData->setName(uName);
 
-	morseChar = toupper(charTable[index]);
-	morseCode = morseTable[morseChar - 44];
+	//morseChar = toupper(charTable[index]);  //using built in table
+
+	morseChar = toupper(getCharFromFile(index)); //using file
+
+	//morseCode = morseTable[morseChar - 44];// using built in table
+
+	morseCode = getCodeFromFile(morseChar - 44);
 	//morseCode = 0;
 }
 char node::getChar()
